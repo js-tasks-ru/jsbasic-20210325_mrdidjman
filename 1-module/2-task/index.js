@@ -10,7 +10,21 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  if (name==null) {
+    return false;
+  } else {
+    if (name.includes(" ")) {
+      spacecheck = false;
+    } else
+      spacecheck = true;
+  
+    if ((name.length>3)&&(spacecheck)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
 
 function sayHello() {
